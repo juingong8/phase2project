@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parks Adoption Agency</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <a class="navbar-brand" href="index.html">Parks Adoption Agency</a>
+        </div>
+       
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav">
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="form.html">Donate</a></li>
+          </ul>
+<div class="dropdown">
+  		<button class="dropbtn"><a href="gallery.html">Animals</a></button>
+  			<div class="dropdown-content">
+    			<a href="gallery.html#dogs">Dogs</a>
+   			    <a href="gallery.html#cats">Cats</a>
+   			    <a href="gallery.html#birds">Birds</a>
+   			    <a href="gallery.html#miscellaneous">Miscellaneous</a>
+  			</div>
+  	</div>       
+    </div><!-- navbar collapse -->
+    </nav>
+      </div>
+    
+    <div class="container-fluid style">
+<!--        <div class="form">
+              <div class="right">
+        <button class="btn btn-primary" onclick="rando()">Adopt</button>
+      </div>
+            
+        </div>
+        
+        
+        
+        <form name="imageForm">
+  <table border=3>
+  <tr>
+    <td>
+      <input type="button" onClick="displayImage()" value="Display Random Image">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="blank.jpg" name="canvas" />
+    </td>
+  </tr>
+  </table>
+</form>
+-->
+
+<br></br>
+<br></br>
+<button onclick="myFunction()">Click me</button>
+
+
+    </div> <!--container-fluid-->
+    
+ 
+    
+    <!-- Always load scripts at the bottom of the body   -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+        
+ // function rando (min, max){
+//  var range = max - min + 1
+//  var result = Math.random ()*range
+//  result += min
+//  result = result - (result % 1)
+//  return result
+
+ 
+//var rando = $("#image-" + id + "-mod-content")
+//       console.log(rando(0,5)) 
+//  }     
+
+//var imagesArray = ["images/bird1.jpg", "images/bird2.jpeg", "images/bird3.jpeg", "images/bird4.jpg", "images/bird5.jpg", "images/bird6.jpg", "images/cat1.jpeg", "images/cat2.jpeg", "images/cat3.jpeg", "images/cat4.jpeg", "images/cat5.jpeg", "images/dog1.jpeg", "images/dog2.jpeg", "images/dog3.jpeg", "images/dog4.jpeg", "images/dog5.jpeg", "images/dog6.jpg", "images/chick1.jpg", "images/chick2.jpg", "images/fish1.jpg", "images/hedgehog1.jpg", "images/lizard1.jpg", "images/spider1.jpeg"];
+
+
+//var imagesArray = [images/bird1.jpg", "images/bird2.jpeg", "images/bird3.jpeg"]
+
+//function displayImage() {
+//      var num = Math.floor(Math.random() * 2);
+ //     document.canvas.src = imagesArray[num];
+//}
+function myFunction() {
+
+var r_img = [];
+r_img[0] = {
+    source:
+        "dog1.jpeg",
+    altText:
+        "Jessie"
+};
+r_img[1] = {
+    source:
+        "dog2.jpeg",
+    altText:
+        "Davi/ Golden Retriever"
+};
+r_img[2] = {
+    source:
+        "dog3.jpeg",
+    altText:
+        "tanya"
+};
+
+var i = Math.floor(r_img.length * Math.random());
+var s = "<img src='/images/" + r_img[i].source + "' alt='" + r_img[i].altText + "'>";
+document.getElementById('container').innerHTML = s;
+console.log('5');
+}
+
+
+    </script>
+    
+</body>
+
+</html>
